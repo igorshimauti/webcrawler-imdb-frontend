@@ -1,0 +1,9 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.card-main {
+    overflow-y: scroll;
+}
