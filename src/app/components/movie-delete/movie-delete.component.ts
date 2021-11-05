@@ -35,7 +35,7 @@ export class MovieDeleteComponent implements OnInit {
   delete(): void {
     this.movieService.delete(this.movie).subscribe(() => {
       this.utilsService.showMessage("Filme excluído com sucesso.");
-      this.router.navigate(['/movie']);
+      this.router.navigate(['']);
     }, e => {
       console.log(e);
       this.utilsService.showMessage(e.message, true);
@@ -43,6 +43,6 @@ export class MovieDeleteComponent implements OnInit {
   }
 
   cancel(): void {
-    this.router.navigate(['/movie']);
+    this.router.navigate(['']);
   }
 }

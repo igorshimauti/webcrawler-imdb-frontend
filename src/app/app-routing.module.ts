@@ -6,24 +6,15 @@ import { MovieUpdateComponent } from './components/movie-update/movie-update.com
 
 const routes: Routes = [{
   path: "",
-  redirectTo: "movie",
-  pathMatch: "full"
-},
-{
-  path: "home",
-  redirectTo: "movie",
-  pathMatch: "full"
-},
-{
-  path: "movie",
   component: MovieReadComponent
+
 },
 {
-  path: "movie/update/:id",
+  path: "update/:id",
   component: MovieUpdateComponent
 },
 {
-  path: "movie/delete/:id",
+  path: "delete/:id",
   component: MovieDeleteComponent
 }];
 

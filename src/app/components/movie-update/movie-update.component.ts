@@ -34,7 +34,7 @@ export class MovieUpdateComponent implements OnInit {
   update(): void {
     this.movieService.update(this.movie).subscribe(() => {
       this.utilsService.showMessage('Filme atualizado com sucesso.');
-      this.router.navigate(['/movie']);
+      this.router.navigate(['']);
     }, e => {
       console.log(e);
       this.utilsService.showMessage(e.message, true);
@@ -42,6 +42,6 @@ export class MovieUpdateComponent implements OnInit {
   }
 
   cancel(): void {
-    this.router.navigate(['/movie']);
+    this.router.navigate(['']);
   }
 }
