@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class CrawlerService {
 
-  baseUrl = "http://localhost:8080/imdb/crawler";
+  //baseUrl = "http://localhost:8080/imdb/crawler";
+  baseUrl = "https://web-crawler-imdb.herokuapp.com/imdb/crawler";
 
   constructor(private http: HttpClient) { }
 

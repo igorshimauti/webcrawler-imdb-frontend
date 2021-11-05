@@ -8,7 +8,8 @@ import { Movie } from '../model/movie.model';
 })
 export class MovieService {
 
-  baseUrl = "http://localhost:8080/imdb/movie";
+  //baseUrl = "http://localhost:8080/imdb/movie";
+  baseUrl = "https://web-crawler-imdb.herokuapp.com/imdb/movie";
 
   constructor(private http: HttpClient) { }
 
