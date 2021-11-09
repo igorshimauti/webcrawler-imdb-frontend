@@ -36,6 +36,17 @@
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
     </mat-card>
+
+    <mat-card class="card-main">
+        <mat-card-title>Comentários</mat-card-title>
+        <mat-card class="card" *ngFor="let comment of movie.comments">
+            <mat-card-title>{{comment.title}}</mat-card-title>
+            <mat-card-subtitle>Nota: {{comment.rate}}/10</mat-card-subtitle>
+            <mat-form-field>
+                <textarea matInput name="description" placeholder="Descrição" [(ngModel)]="comment.description" disabled></textarea>
+            </mat-form-field>
+        </mat-card>
+    </mat-card>
     
     <button mat-raised-button (click)="delete()" color="warn">
         Excluir

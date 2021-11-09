@@ -37,6 +37,17 @@
         </table>
     </mat-card>
 
+    <mat-card class="card-main">
+        <mat-card-title>Comentários</mat-card-title>
+        <mat-card class="card" *ngFor="let comment of movie.comments">
+            <mat-card-title>{{comment.title}}</mat-card-title>
+            <mat-card-title>Nota: {{comment.rate}}/10</mat-card-title>
+            <mat-form-field>
+                <textarea matInput name="description" placeholder="Descrição" [(ngModel)]="comment.description" readonly></textarea>
+            </mat-form-field>
+        </mat-card>
+    </mat-card>
+
     <button mat-raised-button (click)="update()" color="primary">
         Atualizar
     </button>

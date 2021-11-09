@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { CrawlerService } from 'src/app/core/crawler.service';
 import { MovieService } from 'src/app/core/movie.service';
 import { Movie } from 'src/app/model/movie.model';
@@ -19,8 +18,7 @@ export class MovieReadComponent implements OnInit {
 
   constructor(private movieService: MovieService,
     private crawlerService: CrawlerService,
-    private utilsService: UtilsService,
-    private router: Router) { }
+    private utilsService: UtilsService) { }
 
   ngOnInit(): void {
     this.movieService.read().subscribe(movies => {
